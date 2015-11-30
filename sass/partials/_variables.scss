@@ -1,0 +1,63 @@
+// --------------------------------------------------
+// Colors
+//
+
+$kinglet-orange:                #f78c2c; //rgb(247,140,44)
+$kinglet-orange-dark:           #f57400;
+
+$kinglet-green:                 #b7c408;
+$kinglet-green-tint:            rgba(183, 196, 8, 0.5);
+$kinglet-green-dark:            #abb529;
+
+$kinglet-red:                   #f26651;
+$kinglet-red-dark:              #ef4025;
+
+$kinglet-blue:                  #0864d4; //rgb(8,100,212)
+$kinglet-blue-tint:             rgba(8, 100, 212, 0.5);
+$kinglet-blue-dark:             #002b60; //rgb(0,43,96)
+$kinglet-blue-light:            #00aeef;
+$kinglet-blue-light-tint:       rgba(0, 174, 239, 0.5);
+$kinglet-blue-light-alt:		#79cff3; //rgb(121,207,243)
+
+$kinglet-gray-super-light:      #eeeeee;
+$kinglet-gray-light:            #c2c2c2;
+$kinglet-gray-mid:              #777;
+$kinglet-gray-dark:             #464646;
+
+//Color updates:
+$black:							#000;
+$gray-dark:						#414042;
+$gray-mid:						#939598;
+$gray-light:					#d1d3d4;
+$gray-xlight:					#efefef;
+
+$main-blue:						#093145;
+$main-orange:					#db4714;
+$secondary-blue:				#2aace3;
+$secondary-green:				#b6c434;
+$tertiary-blue:					#1443db;
+
+$hover-orange:					#f78c2c;
+
+$shadow-orange:					#b53425; //(181, 52, 37)
+
+$guest-green:					#20A738;
+
+$host-purple:					#B658D4;
+
+
+
+// --------------------------------------------------
+// Alignment
+//
+
+$kinglet-header-height: 54px;
+
+// --------------------------------------------------
+// Fonts
+//
+
+$kinglet-font-bold: "ProximaNova Bold", Helvetica, Arial, sans-serif;
+$kinglet-font-semibold: "ProximaNova SemiBold", Helvetica, Arial, sans-serif;
+$kinglet-font-regular: "ProximaNova Regular", Helvetica, Arial, sans-serif;
+$kinglet-font-light: "ProximaNova Light", Helvetica, Arial, sans-serif;

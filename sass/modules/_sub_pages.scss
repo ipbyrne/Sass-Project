@@ -1,0 +1,350 @@
+//sub-page banners
+.banner-kinglet {
+    margin-top: 54px;
+    background:  url("../img/banner-blue-05.jpg") no-repeat top center;
+    text-align: center;
+    min-height: 345px;
+    background-size: cover;
+    p {
+        font-size: 18px;
+        color: #f78c2c;
+        line-height: 25px;
+        text-transform: uppercase;
+        padding: 123px 0 5px;
+        font-weight: 700;
+        margin: 0;
+    }
+    h5 {
+        font-size: 55px;
+        color: #fff;
+        margin: 0;
+    }
+}
+
+/* About v2, Contact Us, Press Pages */
+.aboutus2-cont {
+    padding: 20px 0 90px;
+    h2 {
+    color: #0b3145;
+    font-size: 60px;
+    text-align: center;
+    }
+    p {
+    color: #636363;
+    font-size: 18px;
+    text-align: center;
+    line-height: 26px;
+    margin: 0;
+    padding: 20px 0 15px;
+    }
+    .main-circle {
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 300px;
+    width: 300px;
+    color: #FFF;
+    font-size: 80px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 80px;
+    padding-top: 90px;
+    margin: 50px auto 0 auto;
+    span {
+        font-size: 18px;
+        display: block;
+        margin-top: 10px;
+        line-height: 25px;
+    }
+    &.orange-bg {
+        background: #f78c2c;
+    }
+    &.lite-blue {
+        background: #79cff3;
+    }
+    &.blue-bg {
+        background: #0864d4;
+    }
+    &.green-bg {
+        background: #abb529;
+    }
+    }
+}
+.contactus-page {
+    .bottom-cont {
+    padding: 0 0 60px 0;
+    h2 {
+        text-align: center;
+        color: #0b3145;;
+        font-size: 60px;
+        text-transform: uppercase;
+        padding: 13px 0 0;
+        margin-bottom: 0;
+    }
+    // cwn
+    input[type="text"], input[type="email"]  {
+        color: #c1c1c1;
+        width: 100%;
+        max-width: 466px;
+        border: 1px solid #999;
+        padding: 13px 12px;
+        font-size: 18px;
+        margin: 50px 0 0;
+    }
+    select {
+        background: #fff;
+        color: #c1c1c1;
+        width: 100%;
+        max-width: 466px;
+        border: 1px solid #999;
+        padding: 13px 12px;
+        font-size: 18px;
+        margin: 50px 0 0;
+        float: right;
+    }
+    textarea {
+        background: #fff;
+        color: #c1c1c1;
+        width: 100%;
+        max-width: 466px;
+        border: 1px solid #999;
+        padding: 13px 12px;
+        font-size: 18px;
+        margin: 50px 0 0;
+        float: right;
+        height: 148px;
+    }
+    input[type="submit"] {
+        background: #ff530d;
+        font-size: 23px;
+        margin-top: 33px;
+        float: right;
+        color: #FFF;
+        line-height: 50px;
+        width: 268px;
+    }
+    }
+    .map-cont img {
+    width: 100%;
+    min-height: 200px;
+    }
+}
+.press-page {
+    padding-bottom: 47px;
+    h2 {
+    font-size: 60px;
+    color: #0b3145;
+    text-transform: uppercase;
+    text-align: center;
+    }
+    .press-detail {
+    padding: 27px 0 28px;
+    .press-img {
+        float: left;
+        width: 100px;
+        height: 100px;
+        margin-right: 27px;
+        margin-top: 4px;
+    }
+    .press-text {
+        margin-left: 124px;
+        h3 {
+        color: #555555;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 18px;
+        padding: 0;
+        margin: 0 4px 0 0;
+        }
+        p {
+        color: #636363;
+        font-size: 13px;
+        line-height: 16px;
+        margin: 5px 4px 0 0;
+        padding: 0;
+        }
+    }
+    .bottom-line {
+        font-size: 13px;
+        padding: 2px 0 0;
+        .read-more {
+        float: left;
+        a {
+            color: #f78c2c;
+        }
+        }
+        .date-cont {
+        float: right;
+        color: #c6c6c6;
+        margin-right: 15px;
+        }
+    }
+    }
+}
+@media(max-width: 767px) {
+    .banner-kinglet {
+        min-height: 250px;
+        h5 {
+            font-size: 35px;
+            margin: 0;
+        }
+        p {
+            font-size: 14px;
+            padding-top: 70px;
+            margin: 0;
+        }
+    }
+    .aboutus2-cont {
+        h2 {
+            font-size: 35px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+    .contactus-page .bottom-cont {
+    h2 {
+        font-size: 35px;
+    }
+    input[type="text"] {
+        float: none;
+        max-width: none;
+    }
+    select {
+        float: none;
+        max-width: none;
+    }
+    textarea {
+        float: none;
+        max-width: none;
+    }
+    input[type="submit"] {
+        width: 100%;
+    }
+    }
+    .press-page h2 {
+    font-size: 35px;
+    }
+}
+@media(max-width: 640px) {
+    .aboutus2-cont .main-circle {
+    width: 250px;
+    height: 250px;
+    margin-top: 50px;
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 80px;
+    span {
+        font-size: 15px;
+    }
+    }
+}
+@media(max-width: 480px) {
+    .press-page .press-detail {
+        .press-img {
+            float: none;
+            margin: 0 auto;
+        }
+        .press-text {
+            margin-left: 0;
+            margin-top: 35px;
+        }
+    }
+    .banner-kinglet h5 {
+        font-size: 25px;
+    }
+}
+
+.aboutus2-cont { 
+    .counter { display:inline-block; } 
+}
+
+/*Policy and Terms*/
+#terms-nav{
+    padding-left:12px;
+    .sub-nav{
+        list-style:none;
+        padding:0;
+
+        .sub-nav-item{
+            position: relative;
+            float:left;
+            margin:10px 10px 3px;
+            color:$kinglet-gray-mid;
+            text-decoration:none;
+            &.selected{
+                border-bottom:3px solid $kinglet-gray-mid;
+                &:hover{
+                    color:black;
+                }
+            }
+            &:hover{
+                color:black;
+            }
+        }
+    }
+}
+
+#privacy{
+    ul, 
+    ul > li, 
+    ul > li > ul, 
+    ul > li > ul > li{
+        list-style: inherit !important;
+        margin: inherit !important;
+        padding-left: inherit !important;
+    }
+}
+
+@media(max-width:480px){
+    #terms-nav{
+        .sub-nav{
+            .sub-nav-item{
+                font-size:.8em;
+            }
+        }
+    }
+}
+
+//OLD LICENSE STYLES
+//TODO: UPDATE!
+.block-main {
+    color: #eee;
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.license-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.license-container .field-entry {
+    padding: 0 10px 0 10px;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.license-container .section-head {
+    text-align: center;
+    margin: 10px 0 30px;
+}
+
+.license-container .text-emphasis {
+    font-weight: bold;
+}
+
+.license-container .signature-label {
+    margin: 20px 0 10px;
+}
+
+.license-container .signature-line {
+    margin: 40px 0 30px;
+}
+
+.user-sign-field {
+    display: inline-block;
+    margin: 0 20px 0 20px;
+    text-decoration: underline;
+}
+

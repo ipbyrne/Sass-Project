@@ -1,0 +1,160 @@
+.splash{
+	font-family: Helvetica, sans-serif;
+	font-size:16px;
+	line-height:1.333;
+	color:#666;
+	background-color:#f7f7f7;
+	min-height:100vh;
+
+	.splash-header{
+		background-color:#fff;
+		padding:20px;
+		border-bottom:1px solid #777;
+		text-align:center;
+	}
+
+	h1{
+		text-align:center;
+		padding: 20px 0 30px;
+		color:#000;
+	}
+
+	h2{
+		font-size:1.4em;
+		font-weight:bold;
+		color:#333;
+	}
+
+	.cover-holder{
+		text-align:center;
+		padding:20px 0;
+		.cover{
+			@include box-shadow(0, 6px, 12px, 0, rgba(0,0,0,.175));
+			.cover-resize{
+				width:150px;
+			}
+		}
+	}
+
+	.sub-header-break{
+		padding: 20px 0;
+		border-bottom:1px solid #ccc;
+	}
+
+	.main-text{
+		padding-top:12px;
+		padding-bottom:15px;
+		span{
+			font-weight:bold;
+			font-size:1.1em;
+		}
+		&.ex-pad{
+			padding-bottom:25px;
+		}
+	}
+
+	.col-holder-center{
+		text-align:center;
+		margin:0 auto;
+	}
+
+	.thinner{
+		max-width:600px;
+	}
+
+	.form-holder{
+		background-color:#fff;
+		padding:22px;
+		@include box-shadow(0, 6px, 12px, 0, rgba(0,0,0,.175));
+		@include border-radius(8px);
+		.form-header{
+			text-align:center;
+			font-weight:bold;
+			font-size:1.4em;
+			color:#db4714;
+			padding-bottom:12px;
+		}
+		label{
+			font-weight:normal;
+			padding: 0 0 3px 3px;
+			color:#777;
+		}
+		input[type=text]{
+			padding:5px;
+			background-color:#ddd;
+			color:#000;
+			width:100%;	
+		}
+		input[type=submit]{
+			background-color:$secondary-blue;
+			width:100%;
+			color: #fff;
+		    padding: 10px;
+		    border: 0;
+		    font-size: 1.1em;
+		    text-transform: uppercase;
+		    @include border-radius(4px);
+		    letter-spacing:.05em;
+		    margin-top:30px;
+		}
+		input[placeholder], [placeholder], *[placeholder]{
+			font-size:.85em;
+			font-style:italic;
+		}
+		&.bottom{
+			margin:20px 100px 30px;
+			form{
+				margin:0 auto;
+				width:75%;
+			}
+		}
+	}
+
+	ol{
+		margin:10px 20px;
+		padding:0 15px;
+	}
+	ol li{
+		padding:10px;
+		font-size:.95em;
+	}
+
+	.error{
+		color:red;
+	}
+
+	.desk{
+		display:block;
+	}
+
+	.mob{
+		display:none;
+	}
+
+	.footer-link{
+		font-size:.9em;
+		color:#db4714;
+		text-align:center;
+	}
+
+	 @media(max-width:640px){
+		.form-holder{
+			&.bottom{
+				margin:10px;
+			}
+		}
+	}
+
+	@media(max-width:767px){
+		.form-holder{
+			margin:33px 0;
+		}
+		.mob{
+			display:block;
+		}
+		.desk{
+			display:none;
+		}
+	}
+
+}

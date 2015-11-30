@@ -1,0 +1,79 @@
+//FORMS OVERRIDE
+/////////////////////////////////////////
+
+.form-group{
+	.two-up{
+		@include clearfix();
+		input[type="text"],
+		button,
+		select{
+			width:42.5%;
+			display:inline-block;
+			margin-right: 15px;
+		}
+	}
+	&.indent{
+		padding-left:15px;
+	}
+	&.no-margin{
+		margin-bottom:0;
+	}
+	&.mini{
+		margin-bottom:10px;
+	}
+}
+
+.form-control{
+	background-color: $gray-xlight;
+}
+
+.btn{
+	background-color:$main-orange;
+	color:white;
+	border: 0;
+
+	&.no-border{
+		border:0;
+		background-color:transparent;
+		color:$main-orange;
+		&:hover{
+			background-color:transparent;
+			text-decoration: underline;
+			color:$main-orange;
+		}
+	}
+	&:hover{
+		background-color:$hover-orange;
+		color:white;
+		border:0;
+		/*For use on future buttons
+		box-shadow:rgba(181, 52, 37, 1) 0 3px 0 0;
+  		-webkit-box-shadow:rgba(181, 52, 37, 1) 0 3px 0 0;
+ 		 -moz-box-shadow:rgba(181, 52, 37, 1) 0 3px 0 0;*/
+	}
+	&.btn-main{
+		width:240px;
+	}
+}
+
+.split-signin{
+	text-align:center;
+	&:before{
+		border-top:1px solid #ccc;
+		content:'';
+		display:table-cell;
+		position:relative;
+		top:0.6em;
+		width:50%;
+	}
+}
+
+.main-label{
+	color:$secondary-blue;
+	text-align:center;
+}
+
+.sub-label{
+	font-size:.85em;
+	color:$secondary-blue;
+}

@@ -1,0 +1,266 @@
+//header
+//---------------------------------------------------------
+header {
+    margin: 0;  padding: 0; border: 0;
+    display: block;
+    font-size:16px;
+
+    //--start promotional message--//
+    .header-top {
+    background: #f78c2c;
+    text-align: center;
+    a, p {
+        font-size: .9em;
+        font-weight: 400;
+        margin: 0;
+        line-height: 40px;
+        span {
+            font-weight: bold;
+        }
+    }
+    .close-icon {
+        position: absolute;
+        right: 19px;
+        top: 10px;
+        line-height: 40px;
+    }
+    }
+    //--end promotional message--//
+
+    .container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .header {
+        .navbar-brand-kinglet {
+            margin: 16px 0 16px 20px;
+            float:left;
+            img {
+                display:inline-block;
+                width: 134px;
+                height: 20px;
+            }
+        }
+        .top-left-menu {
+            padding: 0;
+        }
+        .navbar {
+            border: none;
+            min-height: 0;
+            @include box-shadow(0,.2em,3px,0,rgba(0,0,0,.5));
+        }
+
+        .navbar-header{
+            margin:0;
+        }
+        .navbar-default {
+            background: #fff;
+            margin: 0;
+        }
+        .navbar-fixed-top {
+            background-color: white;  
+        }       
+        .navbar-nav {
+            &.navbar-right{
+                margin-right:0;
+                li.btn-cta{
+                    background-color:$kinglet-orange-dark;
+                    text-align:center;
+                    padding:6px 10px;
+                    margin:10px 0 10px 22px;
+                    @include border-radius(4px);
+                    a{
+                        color:#fff;
+                    }
+                    &:hover,
+                    a:hover{
+                        background-color: $kinglet-orange;
+                    }
+                }
+                li.cta-highlight{
+                    margin:16px 0;
+                    a{
+                        color:$main-orange;
+                        &:hover{
+                            color:$hover-orange;
+                        }
+                    }
+                }
+                li{
+                    margin:16px 32px;
+                }
+                .dropdown-menu{
+                    margin: 13px -13px;
+                    li{
+                        margin:16px;
+                        //background-color:#fff;
+                        color:#777;
+                        &:hover{
+                            background-color:#fff;
+                            color: $kinglet-blue-dark;
+                        }
+
+                        .user-nav-highlight{
+                            color:$kinglet-orange-dark;
+                            &:hover{
+                                color:darken($kinglet-orange-dark, 10%);
+                            }
+                        }
+                        &.user-referral{
+                            margin-top:6px;
+                            margin-bottom:6px;
+                        }
+                        &.nav-divider{
+                            margin:8px 16px;
+                            background-color:$kinglet-gray-light;
+                        }
+
+                    }
+                }
+            }
+        li {
+            margin: 18px 0 14px 32px;
+            text-transform:uppercase;
+            font-size:.9em;
+            letter-spacing: .05em;
+            a {
+                color:  #777;
+                padding: 0;
+                font-size:.9em;
+                font-family:"ProximaNova Regular", Helvetica, Arial, sans-serif;
+                &:hover{
+                    background-color:#fff;
+                    color: $kinglet-blue-dark;
+                    //font-weight:bold;
+                }
+            }
+        }
+    }
+    .navbar-right li {
+        &:last-child {
+            //padding-right:20px;
+        }
+    }
+    }
+}
+
+@media(max-width:1200px){
+
+}
+
+@media(max-width:990px) {
+    header .header {
+        .navbar-nav > li {
+            font-size:.85em;
+        }
+    }
+}
+
+@media(max-width:865px) {
+    header .header {
+        .navbar-nav > li {
+            font-size:.67em;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    header {
+    .container-fluid{
+        .navbar-collapse {
+            margin-right: 0;
+            margin-left:0;
+        }
+    }
+    .header {
+        #navbar.navbar-collapse{
+            .navbar-nav{
+                li{
+                    margin:16px 0;
+                }
+                &.navbar-right{
+                    li{
+                        margin:10px 0;
+                    }
+                    li:first-child{
+                        margin-top:0;
+                    }
+                }
+            }
+        }
+        .navbar-nav {
+            padding: 0 !important;
+            margin: 0;
+            > li {
+                font-size:1em;
+                text-align:center
+                //padding: 0 30px;
+            }
+            &.navbar-right li {
+                //margin: 10px 0;
+                &:first-child{
+                    margin-top:0;
+                }
+                &:last-child{
+                    text-align:center;
+                }
+            }
+        }
+    }
+    .navbar-header {
+        width: auto;
+    }
+    .header-top p {
+        text-align: left;
+        padding-left: 25px;
+    }
+    .navbar > {
+        .container .navbar-brand {
+        width: auto !important;
+        text-align: center;
+        }
+        .container-fluid .navbar-brand {
+        width: auto !important;
+        text-align: center;
+        }
+    }
+    }
+
+    .navbar-default .navbar-toggle {
+        background-color:$kinglet-orange-dark;
+        border-color:$kinglet-orange !important;
+        margin: 12px;
+        &:hover,
+        &:focus{
+            background-color:$kinglet-orange;
+        }
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color:#fff !important;
+    }
+}
+@media(max-width:640px){
+    //--promotional message--//
+    header .header-top {
+        .close-icon {
+            top: 14px;
+        }
+        p {
+            text-align: left;
+            padding-left: 25px;
+        }
+    }
+}
+
+@media(max-width:480px){
+    //--promotional message--//
+    header .header-top {
+        .close-icon {
+            top: 8px;
+        }
+        p {
+            font-size: 12px;
+            padding-top: 12px;
+        }
+    }
+}

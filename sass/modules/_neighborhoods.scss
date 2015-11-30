@@ -1,0 +1,549 @@
+//NEIGHBORHOOD MAIN
+
+.neighborhood-wrapper{
+    position:relative;
+}
+
+//Remove once redo Neighborhood Index page
+.neighborhood-padding{
+    padding-top:40px;
+}
+
+//--START subheader--//
+.neighborhood-wrapper{
+    #sticky-nav{
+        position: absolute;
+        width: 100%;
+        z-index: 998;
+        top: 0;
+        border:none;
+    }
+
+    .navbar{
+        margin-bottom:0;
+        .nav{ 
+            li{
+                display:block;
+                float:left;
+                margin:0;
+                padding:8px 0;
+                a{
+                    color:white;
+                    padding:0;
+                    margin:0;
+                    display:inline-block;
+                    &:hover{
+                        text-decoration: underline;
+                        background-color:transparent;
+                    }
+                }
+                &.current > a:hover{
+                    text-decoration:none;
+                    cursor:default;
+                }
+            }
+            &.navbar-nav.navbar-right{
+                margin-right:15px;
+            }
+        }
+    }
+
+    .navbar-inner{
+        padding: 0;
+        background-color: rgba(0,0,0,.4);
+        border-bottom: 0;
+    }
+    .breadcrumbs > {
+        *{
+            &:before{
+                content:"\f105";
+                font-family: "FontAwesome";
+                position:relative;
+                color:#fff;
+                margin:0 15px;
+            }
+            &:first-child{
+                &:before{
+                    content:"";
+                }
+            }
+        }
+
+    }
+}
+//--END subheader--//
+
+//--START main banner--//
+.banner-neighborhood,
+.banner-city {
+    margin-top: 54px;
+    text-align: center;
+    min-height: 360px;
+    h5, 
+    p {
+        color: #fff;
+        margin: 0;
+    }
+    p{
+        font-size:19px;
+        text-transform:uppercase;
+        line-height: 25px;
+        font-weight:700;
+        letter-spacing:1px;
+    }
+    h5 {
+        font-size: 55px;
+        padding-top:164px;
+        text-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    }
+    //To change per city
+    &.baltimore{
+        background:  linear-gradient( rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.25) ), url("../img/neighborhoods/baltimore-header.jpg") no-repeat top center;
+        background-size: cover;
+    }
+    &.dc{
+        background:  linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15) ), url("../img/neighborhoods/dc-header.jpg") no-repeat top center;
+        background-size: cover;
+    }
+}
+.banner-city{
+    min-height:480px;
+    h5{
+        padding-top:210px;
+    }
+    &.mtvernon{
+        background:  linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("../img/neighborhoods/mtvernon-header.jpg") no-repeat top center;
+        background-size: cover;
+    }
+    &.baltdowntown{
+        background:  linear-gradient( rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3) ), url("../img/neighborhoods/baltdowntown/baltdowntown-header.jpg") no-repeat top center;
+        background-size: cover;
+    }
+    &.southbalt{
+        background:  linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25) ), url("../img/neighborhoods/southbalt/southbalt_header.jpg") no-repeat top center;
+        background-size: cover;
+    }
+    &.locustpoint{
+        background:  linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25) ), url("../img/neighborhoods/locustpoint/locustpoint_header.jpg") no-repeat center;
+        background-size: cover;
+    }
+    &.canton{
+        background:  linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4) ), url("../img/neighborhoods/canton/canton_header.jpg") no-repeat center;
+        background-size: cover;
+    }
+    &.federalhill{
+        background:  linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35) ), url("../img/neighborhoods/federalhill/federalhill_header.jpg") no-repeat center;
+        background-size: cover;
+    }   
+    &.hampden{
+        background:  linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25) ), url("../img/neighborhoods/hampden/hampden_header.jpg") no-repeat bottom center;
+        background-size: cover;
+    }      
+    &.dcdowntown{
+        background:  linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) ), url("../img/neighborhoods/dcdowntown/dcdowntown_header.jpg") no-repeat top center;
+        background-size: cover;
+    }
+    &.capitolhill{
+        background:  linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.425) ), url("../img/neighborhoods/capitolhill/capitolhill_header.jpg") no-repeat top center;
+        background-size: cover;
+    }
+    &.alexandria{
+        background:  linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25) ), url("../img/neighborhoods/alexandria/alexandria_header.jpg") no-repeat center;
+        background-size: cover;
+    }
+    &.dupontcircle{
+        background:  linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25) ), url("../img/neighborhoods/dupontcircle/dupontcircle_header.jpg") no-repeat bottom center;
+        background-size: cover;
+    }
+    &.georgetown{
+        background:  linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25) ), url("../img/neighborhoods/georgetown/georgetown_header.jpg") no-repeat top center;
+        background-size: cover;
+    }
+    &.bethesda{
+        background:  linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4) ), url("../img/neighborhoods/bethesda/bethesda_header.jpg") no-repeat bottom center;
+        background-size: cover;
+    }    
+    .facts-holder{
+        text-align:center;
+    }
+    li{
+        color:#fff;
+        font-size:19px;
+        display:inline-block;
+        &:after{
+            content:"\f0c8";
+            font-family: "FontAwesome";
+            position:relative;
+            margin:0 15px;
+            vertical-align:middle;
+            color:rgba(255,255,255,0.75);
+            font-size:.55em;
+        }
+        &:last-child{
+            &:after{
+                content:"";
+            }
+        }
+    }
+}
+//--END main banner--//
+
+//--START content--//
+.neighborhood-wrapper{
+    .feature-header{
+        //TODO: set appropriate priority
+        padding-top:22px !important;
+        p{
+            font-family:"Proxima-Nova", sans-serif;
+            font-size:18px;
+            padding:20px 10%;
+            line-height:1.5;
+            color:#666;
+        }
+        h4{
+            //TODO: set appropriate priority
+            font-size:48px !important;
+            padding-bottom:9px;
+        }
+    }
+    .city-detail{
+        margin:0 3%;
+        margin-bottom:40px;
+        text-align:left !important;
+        ul{
+            //list-style:circle;
+            padding-top:8px;
+            li{
+                list-style:disc;
+                font-size:1.1em;
+                margin-left:22px;
+                line-height:1.7;
+                color:#444;
+            }
+        }
+    }
+    .neighborhood-button,
+    .city-button{
+        position:relative;
+        overflow:hidden;
+        .text-overlay-holder{
+            position:absolute;
+            width:100%;
+            line-height:18em;
+            text-align:center;
+            top:0;
+            .text-overlay{
+                font-family:"ProximaNova SemiBold", Helvetica, Arial, sans-serif;
+                font-size:34px;
+                letter-spacing:3px;
+                color:#fff;
+                background-color:rgba(0,0,0,0.2);
+                &:hover{
+                    background-color:rgba(0,0,0,0.3);
+                }
+                &.light{
+                    background-color:rgba(0,0,0,0);
+                    &:hover{
+                        background-color:rgba(0,0,0,0.1);
+                    }
+                }
+
+            }
+        }
+        &.city-thumbnail{
+            .text-overlay-holder{
+                line-height:26em;
+            }
+        }
+    }
+    //overrides-neighborhood styles for main neighborhood page
+    .city-button{
+        height:576px;
+        .text-overlay-holder{
+            .text-overlay{
+                font-size:52px;
+            }
+            &:hover{
+                background-color:rgba(0,0,0,0.25);
+            }
+        }
+        &.city-thumbnail{
+            .text-overlay-holder{
+                line-height:43em;
+            }
+        }
+    }
+    .neighborhood-info-holder{
+        margin:20px 0;
+    }
+    .neighborhood-desc{
+        //TODO: combine this with feeature-header above
+        p{
+            font-family:"Proxima-Nova", sans-serif;
+            font-size:18px;
+            padding:0 0 10px;
+            line-height:1.5;
+            color:#666;
+        }
+    }
+    .known-holder{
+        color:#666;
+        ul{
+            padding:10px;
+        }
+        li{
+            //color:#fff;
+            font-size:17px;
+            display:inline-block;
+            //letter-spacing:1px;
+            line-height:1.8;
+            &:before{
+                content:"\f111";
+                font-family: "FontAwesome";
+                position:relative;
+                margin:0 8px;
+                line-height:2.5;
+                vertical-align:middle;
+                color:rgba(0,0,0,0.5);
+                font-size:.5em;
+            }
+        }
+    }
+    .companies-holder{
+        padding:0 20px;
+        margin:0 20px;
+        border-left:1px solid #999;
+        h4{
+            font-size:18px;
+            border-bottom:1px solid #999;
+            color:#666;
+            margin-bottom:10px;
+            padding-left:5px
+        }
+        li{
+            padding-left:5px;
+            font-size:16px;
+            line-height:2;
+            color:$kinglet-blue;
+        }
+    }
+    .map-wrapper,
+    .gallery-wrapper,
+    .feature-wrapper{
+        padding:30px 0 30px;
+        h4{
+            padding-bottom:15px;
+            font-size: 32px;
+            color: $kinglet-gray-mid;
+            font-weight:normal;
+            margin:0;
+            letter-spacing:1px;
+            text-align:center;
+        }
+        .submap{
+            padding-top:10px;
+            &.left{
+                text-align:left;
+                padding-left:20px;
+            }
+            &.right{
+                text-align:right;
+                padding-right:20px;
+            }
+            p{
+                font-family: "Proxima-Nova", sans-serif;
+                font-size: 1.05em;
+                line-height: 1.5;
+                color: #666;
+            }
+        }
+    }
+    .start-search{
+        text-align:center;
+        a{
+          font-size: 16px;
+          color: #fff;
+          text-decoration: none;
+          //font-weight: bold;
+          font-family: Montserrat, sans-serif;
+          text-transform:uppercase;
+          line-height: 40px;
+          text-align: center;
+          margin: 28px;
+          background: #f78c2c;
+          display: block;
+          @include border-radius(4px);
+          //TODO create mixin
+          -webkit-background-clip: padding-box;
+          -moz-background-clip: padding;
+          background-clip: padding-box;
+          //width: 360px;
+          padding:0 12px;
+          display: inline-block;
+          letter-spacing: .1em;
+        }
+    }
+    .market-wrapper{
+        font-size: 1.3em;
+        padding:20px 0;
+        color:#464646;
+        font-family: "Proxima-Nova", sans-serif;
+        .barChart{
+            text-align:center;
+            p{
+                padding:10px 0;
+            }
+            .legend{
+                text-align:left;
+                display:inline-block;
+                &:before{
+                    content:"\f0c8";
+                    font-family: "FontAwesome";
+                    position:relative;
+                    margin:0 8px;
+                    vertical-align:middle;
+                    font-size:.55em;
+                }
+                &.red{
+                    color: rgba(239,64,37,0.8);
+                }
+                &.blue{
+                    color: rgba(62,158,206,0.8);
+                }
+            }
+        }
+        .percentage{
+            text-align:center;
+            margin-top:52px;
+            p{
+                font-size:.95em;
+                line-height:2.5;
+                letter-spacing:1px;
+                &.num{
+                    font-size:6em;
+                    font-weight:bold;
+                    line-height:1;
+                    letter-spacing:0;
+                }
+                &.desc{
+                    font-size:3.4em;
+                    font-weight:bold;
+                    line-height:1;
+                    letter-spacing:0;
+                }
+                &.greater{
+                    color:$kinglet-red-dark;
+                }
+                &.less{
+                    color:$kinglet-green-dark;
+                }
+            }
+        }
+    }
+    //definitions for gallery options
+    .neighborhood-full{
+        max-height:640px;
+        overflow:hidden;
+        &.skinny{
+            max-height:300px;
+        }
+    }
+    //TODO: put this in because I need to investigate image manipulation
+    //ultimately want to make image larger and crop vs going to smallest 
+    //common denominator like I do with 245px height below (change to 360 to see difference)
+    .thirds{
+        max-height:245px;
+        overflow:hidden;
+        &.ex{
+            max-height:400px;
+        }
+    }
+    .neighborhood-space-holder{
+        background-color:#fff;
+        @include box-shadow;
+        vertical-align: middle;
+    }
+    .neighborhood-pad{
+        margin-bottom:48px;
+    }
+    .neighborhood-one-half{
+        max-height:510px;
+        overflow:hidden;
+    }
+    //TODO: consolidate with featured properties on _homepage.scss
+    //Below from office-space to location-title all copied from homepage
+    .neighborhood-featured{
+        .office-space{
+            font-size:12px;
+            color:$kinglet-gray-mid;
+            float:left;
+            margin:0 0 0 3px;
+            span{
+                margin: 0 5px;
+            }
+            &:last-child span{
+                display:none;
+            }
+        }
+        .city-detail{
+            margin:0;
+        }
+        .city-thumbnail {
+            height:314px;
+            overflow:hidden;
+            img {
+                position: relative;
+                width: 100%;
+                }
+
+            .total-available {
+                position: absolute;
+                background: rgba(0, 0, 0, 0.6);
+                bottom: 83px;
+                line-height: 40px;
+                font-size: 14px;
+                font-weight: bold;
+                color: #fff;
+                padding: 0 20px;
+            }
+        }
+        .neighborhood-one-thirds{
+            .city-thumbnail{
+                height:250px;
+            }
+        }
+        .location-title {
+            font-size: 15px;
+            //line-height: 26px;
+            color:  #464646;
+            margin: 3px 0 0 3px;
+            display: block;
+            text-align:left;
+        }
+        //Added in for template purpose only - usually covered by a property
+        .office-space,
+        .location-title{
+            text-transform:uppercase;
+            font-weight:bold;
+        }
+    }
+}
+
+.shiftbike,
+.shiftford,
+.shiftwhitehouse,
+.shiftcouple{
+    margin-top:-120px;
+}
+
+.shiftmtvernon{
+    margin-top:-448px;
+}
+
+
+//--END content--//
+
+
+
+
+

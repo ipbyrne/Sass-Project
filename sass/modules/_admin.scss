@@ -1,0 +1,420 @@
+.admin {
+    background-color: #e2e2e2;
+
+    .container {
+        margin-top: $kinglet-header-height + 20px;
+        max-width:none !important;
+        width:1245px;
+    }
+
+//START admin header overrides
+
+    header {
+        .header {
+            .navbar-fixed-top {
+                background-color: #fff;
+            }
+
+            .navbar-brand-kinglet{
+                margin:3px;
+                img{
+                    width:48px;
+                    height:48px;
+                }
+            }
+
+            .navbar-nav {
+                li {
+                    a{
+                        &.coming-soon{
+                            color:#ddd;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+//END admin header overrides
+
+//START Text Treatment
+    h1, h2, h3, h4, .stat-highlight{
+        font-family: "Helvetica";
+        color: rgb(0,0,0);
+        line-height:1;
+        letter-spacing:0.04em;
+        font-weight:400;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    h1, .stat-highlight{
+        font-weight: 600;
+    }
+
+    h2{
+        font-size:24px;
+        padding-bottom:12px;
+    }
+
+    h3{
+        font-size: 18px;
+        text-transform:uppercase;
+        color:#777;
+        &.sub-menu{
+            text-transform:inherit;
+        }
+    }
+
+    h4{
+        font-size: 13px;
+        text-transform:uppercase;
+        color:#777;
+        &.mini{
+            font-size:11px;
+        }
+    }
+
+    .stat-highlight {
+        font-size: 44px;
+        color: $kinglet-blue;
+        padding-top:12px;
+        padding-bottom:4px;
+    }
+
+    #snapshot{
+        .stat-highlight{
+            font-size:17px;
+            //color:$kinglet-orange;
+            &.top-stat{
+                padding-top:3px;
+            }
+        }
+        .snapshot-holder{
+            //background-color:#fff;
+            padding:10px 0;
+            margin-top:4px;
+            @include border-radius(16px);
+            text-align:center;
+        }
+        h4{
+            padding-bottom:8px;
+        }
+    }
+
+
+    .main-stats{
+        h1, h2, h3, h4, .stat-highlight{
+            color:rgb(255,255,255);
+        }
+        h4.comp{
+            text-transform:inherit;
+            padding:14px 0 14px 28px;
+        }
+        h4{
+            padding-bottom:14px;
+        }
+        .stat-highlight{
+            padding-bottom:60px;
+        }
+    }
+
+//END Text Treatment
+
+//START Link styles
+
+    a {
+        color: $main-orange;
+        text-decoration: none;
+
+        &:hover {
+            color: $hover-orange;
+            text-decoration: underline;
+        }
+    }
+
+    a.btn-primary {
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    #stats{
+        a{
+            color:$kinglet-blue-light;
+            &.location{
+                color:$kinglet-blue;
+            }
+        }
+    }
+
+//END Link styles
+
+//START Stat styles
+    #stats{
+        .section-holder{
+            border-bottom:2px solid #b8b8b8;
+            padding-bottom:12px;
+            margin-bottom: 28px;
+            &.last{
+                border-bottom:0;
+            }
+        }
+        .main-stats{
+            width: 100%;
+            padding: 28px 28px 0;
+            position:relative;
+            margin-bottom:24px;
+            &.first{
+                background-color:$kinglet-blue-dark;
+            }
+            &.second{
+                background-color:$kinglet-blue;
+            }
+            &.third{
+                background-color:$kinglet-blue-light;
+            }
+        }
+        .comp-bar{
+            position:absolute;
+            left:0;
+            bottom:0;
+            height:40px;
+            width:100%;
+            background-color:rgba(0,0,0,.3);
+        }
+
+        .dropdown-margin{
+            margin-top:10px;
+        }
+
+        .no-dropdown-margin{
+            margin-top:30px;
+        }
+
+        .single-line{
+            width:100%;
+            text-align:center;
+            background-color:#fff;
+            color:#777;
+            @include border-radius(8px);
+            margin:20px 0;
+            padding:10px;
+            span{
+                color:$kinglet-orange;
+                font-size:1.5em;
+            }
+            &.bottom{
+                margin-top:0;
+            }
+        }
+
+        .chart-title{
+            text-align:center;
+            padding-top:10px;
+            padding-bottom:10px;
+            &.bottom{
+                padding-top:20px;
+            }
+        }
+
+        .no-data-img-holder{
+            padding-top:24px;
+            text-align:center;
+        }
+
+        #city-request-list{
+            li{
+                display:inline-block;
+                margin:0 30px;
+            }
+        }
+
+        #listings{
+
+            table{
+                width:100%;
+                background-color:#fff;
+                margin-top:6px;
+
+                thead{
+                    border-bottom:1px solid #777;
+                    color:#777;
+                    td{
+                        padding:6px 0;
+                    }
+                }
+
+                td{
+                    padding:10px 0;
+                    .listing-title-holder{
+                        max-width:250px;
+                        white-space:nowrap;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                    }
+                }
+
+                td:nth-child(1){
+                    text-align:right;
+                    color:#777;
+                }
+
+                td:nth-child(2){
+                    width:70%;
+                    text-align:left;
+                    padding-left:6px;
+                }
+                td:nth-child(3){
+                    width:25%;
+                    text-align:center;
+                }
+                tbody{
+                    tr:nth-child(odd){
+                        background-color:#eee;
+                    }
+                }
+                tfoot{
+                    tr{
+                        td:nth-child(1){
+                            text-align:center;
+                            padding-bottom:3px;
+                            padding-top:3px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .chart-padding{
+            padding:10px;
+            background-color:#fff;
+            &.margin-bottom{
+                margin-bottom:20px;
+            }
+        }
+
+        #select-listings{
+            width: 30%;
+            position: absolute;
+            top:4px;
+            right: 0;
+            margin-right: 15px;
+
+        }
+
+
+        #overview{
+            h1{
+                padding-top:20px;
+                padding-bottom:20px;
+            }
+            li{
+                h3{
+                    padding-left:30px;
+                    padding-top:20px;
+                    padding-bottom:20px;
+                    cursor:pointer;
+                    &.selected{
+                        background-color:#fff;
+                    }
+                }
+            }
+        }
+        #website{
+            .traffic-pie-legend,
+            .users-pie-legend{
+                li{
+                    span{
+                        width: 10px;
+                        height: 10px;
+                        display: inline-block;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+//END Stat styles
+
+
+//START Vess Admin styles
+    .row.search {
+        margin-bottom: 10px;
+    }
+
+    .module-data {
+        margin-bottom: 10px;
+
+        .module-item {
+            margin-bottom: 20px;
+        }
+    }
+
+    ul.actions {
+        float: right;
+
+        li {
+            display: inline;
+            padding: 0 5px;
+        }
+
+        li+li {
+            border-left: 1px solid #ccc
+        }
+    }
+
+    form {
+        input[type=text] {
+            padding: 0 4px;
+            border: 1px solid #ccc;
+            width: 100%;
+            height: 35px;
+
+        }
+
+        input[type=text].search-query {
+            width: 200px;
+        }
+
+        textarea {
+            width: 100%;
+        }
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .table-transactions {
+        tbody {
+            tr {
+                td.complete {
+                    color: #00dd00;
+                }
+
+                td.failed {
+                    color: #ee0000;
+                }
+            }
+        }
+    }
+
+    ul.line-legend, ul.doughnut-legend {
+        li {
+            span {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                margin-right: 5px;
+            }
+        }
+    }
+//END Vess admin styles
+}

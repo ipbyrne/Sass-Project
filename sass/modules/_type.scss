@@ -1,0 +1,38 @@
+//TYPE FRAMEWORK
+
+h1,h2,h3,h4,h5,h6,p,label,a,ul,li{
+	font-family:"Roboto",sans-serif;
+	font-size:16px;
+	font-weight:400;
+	letter-spacing:.04em;
+	color:$gray-dark;
+}
+
+h1{
+	font-weight: 300;
+	font-size:50px;
+}
+
+h2,h3,h4,h5{
+	font-weight:700;
+	text-transform: uppercase;
+}
+
+h2{
+	font-size:34px;
+}
+
+h3{
+	font-size:24px;
+}
+h4{
+	font-size:20px;
+}
+h5{
+	font-size:18px;
+}
+
+a{
+	color:$main-orange;
+	text-decoration:none;
+}

@@ -1,0 +1,930 @@
+$step-num-diameter: 66px;
+$step-detail-width: 300px;
+$reward-detail-width: 260px;
+
+@mixin transform($func) {
+    -ms-transform: $func; /* IE 9 */
+    -webkit-transform: $func; /* Chrome, Safari, Opera */
+    transform: $func;
+}
+
+@mixin tinted-background($rgba, $url) {
+    background: linear-gradient($rgba, $rgba), url($url) no-repeat top center;
+}
+
+@mixin center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.referral-wrapper {
+    h1, h2, h3, h4, h5, h6 {
+        text-align: center;
+    }
+
+    a {
+        color: $kinglet-orange-dark;
+
+        &:hover {
+            color: $kinglet-orange;
+        }
+    }
+
+    ul {
+        text-align: center;
+
+        li {
+            display: inline-block;
+        }
+    }
+
+    .btn {
+        width: initial;
+        display: inline-block;
+        @include border-radius(4px);
+        text-align: center;
+        font-size: 20px;
+        letter-spacing:.035em;
+    }
+
+    .btn.btn-cta, .btn.btn-redeem {
+        min-width: 210px;
+        margin: 20px;
+        padding: 15px;
+        background-color: $kinglet-orange;
+        color: #fff;
+
+        &:hover {
+            background-color: $kinglet-orange-dark;
+        }
+    }
+
+    .btn.btn-redeem {
+        text-transform: none;
+    }
+
+    .btn.btn-reward {
+        width: 162px;
+        height: 162px;
+        margin: 20px 40px;
+        background-color: #fff;
+        color: #000;
+        position: relative;
+        overflow:hidden;
+
+        img, p, .hover-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            @include transform(translate(-50%, -50%));
+        }
+
+        p {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            white-space: normal;
+            letter-spacing: .025em;
+        }
+
+        img{
+            height:150px;
+        }
+
+        .hover-overlay {
+            display:none;
+            background-color:rgba(0,43,96,.6);
+            width:100%;
+            height:100%;
+        }
+
+        &:hover {
+            //background-color: $kinglet-green;
+
+            img {
+                //opacity: 0.4;
+                //filter: alpha(opacity=40); /* For IE8 and earlier */
+            }
+
+            p, .hover-overlay {
+                display: block;
+            }
+        }
+
+        &.btn-reward-invite{
+            width:140px;
+            height:140px;
+            margin-top:15px;
+            margin-bottom:15px;
+            padding-top:0;
+
+            img{
+                height:120px;
+            }
+        }
+    }
+
+    .ks-banner {
+        margin-top: $kinglet-header-height;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0 30px;
+            color: #fff;
+
+            @media (max-width:767px) {
+                margin: 0;
+            }
+        }
+
+        h1 {
+            font-size: 55px;
+            letter-spacing:0.03em;
+        }
+
+        h2 {
+            font-size: 48px;
+            &.half{
+                font-size:24px;
+            }
+        }
+
+        h3 {
+            font-family: $kinglet-font-regular;
+            font-size: 28px;
+        }
+
+        h4 {
+            font-family: $kinglet-font-light;
+            font-size: 28px;
+        }
+        .btn{
+            margin-top:8px;
+        }
+    }
+
+    .ks-banner.main {
+        background: url("/img/banner-blue-05.jpg") no-repeat top center;
+        background-size: cover;
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0 250px;
+
+            @media (max-width:1200px) {
+                margin: 0 130px;
+            }
+
+            @media (max-width:990px) {
+                margin: 0 30px;
+            }
+
+            @media (max-width:767px) {
+                margin: 0;
+            }
+        }
+
+        h4 {
+            color: $kinglet-orange;
+            margin-top: 10px;
+        }
+    }
+
+    .ks-banner.signup, .ks-banner.invite, .ks-banner.reward {
+        background: url("/img/banner-blue-05.jpg") no-repeat top center;
+        background-size: cover;
+    }
+
+    .header {
+        margin-top: 40px;
+        margin-bottom: 30px;
+
+        h2, h3 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: $kinglet-gray-mid;
+        }
+
+        h2 {
+            font-family: $kinglet-font-regular;
+            &.simple{
+                margin-top:-5px;
+                font-size:2.6em;
+            }
+        }
+
+        h3 {
+            font-family: $kinglet-font-light;
+            font-size: 20px;
+            text-transform: uppercase;
+            &.h3-boost{
+                font-size:1.9em;
+            }
+        }
+    }
+
+    .steps {
+        .step-detail {
+            .step-num {
+                width: $step-num-diameter;
+                height: $step-num-diameter;
+                @include center;
+                background-color: #fff;
+                border: 2px solid;
+                @include border-radius(50%);
+                font-family: Montserrat, sans-serif;
+                font-size: $step-num-diameter / 2;
+                line-height: $step-num-diameter - 2;
+                text-align: center;
+            }
+        }
+
+        .step-content {
+            h4 {
+                font-size: 24px;
+                color: #000;
+            }
+        }
+
+        .step-1 {
+            .step-detail {
+                .step-num {
+                    border-color: $kinglet-green;
+                    color: $kinglet-green;
+
+                    &.active {
+                        background-color: $kinglet-green;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .step-2 {
+            .step-detail {
+                .step-num {
+                    border-color: $kinglet-blue-light;
+                    color: $kinglet-blue-light;
+
+                    &.active {
+                        background-color: $kinglet-blue-light;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .step-3 {
+            .step-detail {
+                .step-num {
+                    border-color: $kinglet-blue;
+                    color: $kinglet-blue;
+
+                    &.active {
+                        background-color: $kinglet-blue;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    section.steps {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        .steps {
+            hr.step-line {
+                position: relative;
+                top: 102px;
+
+                @media (max-width:767px) {
+                    display: none;
+                }
+            }
+
+            .step-detail {
+                .step-num {
+                    box-shadow: 0 0 18px rgba(128, 128, 128, 0.25);
+                }
+
+                .step-content {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .content {
+        margin-bottom: 20px;
+
+        .steps {
+            margin-top: 56px;
+            margin-bottom: 40px;
+
+            .step-detail {
+                width: $step-detail-width;
+                height: $step-detail-width * 1.1;
+                @include center;
+                box-shadow: 0 0 10px 4px rgba(128, 128, 128, 0.4);
+
+                .step-num {
+                    position: relative;
+                    top: -($step-num-diameter / 2);
+                }
+
+                .step-content {
+                    margin: 0 20px;
+
+                    p {
+                        margin-top: 20px;
+                        font-family: $kinglet-font-light;
+                        font-size: 18px;
+                        color: $kinglet-gray-mid;
+                    }
+                }
+
+                .step-footer {
+                    width: $step-detail-width;
+                    height: 20px;
+                    position: absolute;
+                    bottom: 0;
+                }
+
+                /*
+                &:hover {
+                    h4, p {
+                        color: #fff;
+                    }
+
+                    .step-footer {
+                        display: none;
+                    }
+                }
+                */
+            }
+
+            .step-1 {
+                .step-detail {
+                    .step-footer {
+                        background-color: $kinglet-green;
+                    }
+
+                    /*
+                    &:hover {
+                        @include tinted-background($kinglet-green-tint,
+                                                   "/img/banner1-small.jpg");
+                        background-size: cover;
+                    }
+                    */
+                }
+            }
+
+            .step-2 {
+                .step-detail {
+                    .step-footer {
+                        background-color: $kinglet-blue-light;
+                    }
+
+                    /*
+                    &:hover {
+                        @include tinted-background($kinglet-blue-light-tint,
+                                                   "/img/banner1-small.jpg");
+                        background-size: cover;
+                    }
+                    */
+                }
+            }
+
+            .step-3 {
+                .step-detail {
+                    .step-footer {
+                        background-color: $kinglet-blue;
+                    }
+
+                    /*
+                    &:hover {
+                        @include tinted-background($kinglet-blue-tint,
+                                                   "/img/banner1-small.jpg");
+                        background-size: cover;
+                    }
+                    */
+                }
+            }
+        }
+    }
+
+    .featured-rewards {
+        @include tinted-background($kinglet-blue-light-tint,
+                                   "/img/banner3_bw.jpg");
+        background-size: cover;
+
+        .header {
+            h2 {
+                color: $kinglet-blue-dark;
+                font-size:2.88em;
+                margin-top:-15px;
+                margin-bottom:-20px;
+            }
+        }
+
+        .rewards {
+            margin-bottom: 40px;
+            .btn{
+                @include border-radius(8px);
+            }
+            &.rewards-invite{
+                margin-bottom:0;
+            }
+        }
+        .all-prizes{
+            margin:-40px auto 0;
+            text-align:center;
+            padding-bottom:32px;
+            font-size: 1.7em;
+            a{
+                color: #fff;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        &.featured-rewards-invite{
+            background: #fff;
+            margin-top:-50px;
+        }
+    }
+
+    .signup {
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left;
+        }
+    }
+
+    .invite {
+        h3 {
+            margin-bottom: 10px;
+            font-family: $kinglet-font-regular;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        textarea {
+            display: block;
+            width: 500px;
+            @include center;
+            padding:6px;
+            width:100%;
+        }
+
+        .import {
+            display: block;
+            @include center;
+            text-align:center;
+            text-transform: uppercase;
+        }
+
+        span.link {
+            display: block;
+            @include center;
+            padding: 10px;
+            width: 410px;
+            border: 1px solid $kinglet-gray-mid;
+            text-align: center;
+        }
+
+        span.error {
+            color: red;
+        }
+
+        .copy {
+            text-align: center;
+            text-transform: uppercase;
+            font-size:1.22em;
+            padding-top:3px;
+        }
+
+        .share{
+            padding: 25px 0;
+            &:first-child{
+                padding-top:45px;
+            }
+        }
+
+        .social {
+            list-style: none;
+            display: block;
+
+            li {
+                margin-right: 5px;
+
+                a {
+                    display: inline-block;
+                    border-radius: 50%;
+                    background-color: $kinglet-gray-light;
+                    overflow: hidden;
+
+                    &:hover {
+                        background-color: $kinglet-gray-mid;
+                    }
+
+                    &:before {
+                        display: inline-block;
+                        width: 42px;
+                        height: 42px;
+                        font-family: "kinglet-icons";
+                        font-size: 22px;
+                        line-height: 42px;
+                        color: #fff;
+                    }
+
+                    &[href*="facebook"]:before {
+                        color: #315a95;
+                        content: '\e801';
+                    }
+
+                    &[href*="twitter"]:before {
+                        color: #43aeeb;
+                        content: '\e802';
+                    }
+
+                    &[href*="plus"]:before {
+                        font-family: "FontAwesome";
+                        line-height: 48px;
+                        color: #e3473c;
+                        content: '\f0d5';
+                    }
+                }
+            }
+        }
+    }
+
+    .reward {
+        h3, h4, p {
+            color: $kinglet-gray-mid;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .featured {
+            @include center;
+            //width: 500px;
+            text-align: center;
+            margin-top:40px;
+            margin-bottom:48px;
+
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                margin-bottom: 40px;
+                font-family: $kinglet-font-regular;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+
+            h4 {
+                font-family: $kinglet-font-light;
+            }
+
+            & > * {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            img{
+                margin-right:25px;
+            }
+        }
+
+        .reward-class-container {
+            position: relative;
+            height: 450px;
+            margin-top: 40px;
+
+            .reward-class {
+                overflow: hidden;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                padding-top: 190px;
+                width: 100%;
+                font-family: $kinglet-font-bold;
+                font-size: 240px;
+                line-height: 100px;
+                text-transform: uppercase;
+                text-align: left;
+            }
+
+            .reward-group {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+
+                li {
+                    margin-left: 20px;
+                    margin-right: 20px;
+
+                    .reward-detail {
+                        position: relative;
+                        width: 250px;
+                        height: 340px;
+                        @include center;
+                        background-color: #fff;
+                        box-shadow: 0 0 18px 4px rgba(128, 128, 128, 0.25);
+
+                        img {
+                            position: absolute;
+                            top: 20px;
+                            left: 50%;
+                            margin-right: -50%;
+                            @include transform(translateX(-50%));
+                            height:180px;
+                        }
+
+                        p {
+                            position: absolute;
+                            top: 210px;
+                            left: 10px;
+                            right: 10px;
+                        }
+
+                        .btn.btn-redeem {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        $platinum:  #a6a6a6;
+        $gold:      #a1794c;
+        $silver:    #adb0b7;
+
+        .platinum,
+        .gold,
+        .silver{
+            h3.tier-name{
+                text-transform:capitalize;
+                //margin-top: 11px;
+                display: table;
+                white-space: nowrap;
+            }
+
+            h3.tier-name:before, h3.tier-name:after{
+                border-top: 1px solid;
+                content: '';
+                display: table-cell;
+                position: relative;
+                top: 0.5em;
+                width: 50%;
+            }
+
+            h3.tier-name:before{
+                right:1.5%;
+            }
+
+            h3.tier-name:after{
+                left:1.5%;
+            }
+
+            .btn.btn-redeem{
+                letter-spacing:0.07em;
+                color:#fff;
+                .pre-hover{
+                    display:block;
+                }
+                .post-hover{
+                    display:none;
+                }
+                &:hover{
+                    .pre-hover{
+                        display:none;
+                    }
+                    .post-hover{
+                        display:block;
+                    }
+                }
+            }
+        }
+
+        .platinum {
+            h3 {
+                color: $platinum;
+            }
+
+            .reward-class-container {
+                .reward-class {
+                    background-color: #d9d9d9;
+                    color: #e5e5e5;
+                }
+            }
+
+            .btn.btn-redeem {
+                background-color: $platinum;
+
+                &:hover {
+                    background-color: lighten( $platinum, 20%);
+                }
+
+                &.btn-purchase{
+                    &:hover{
+                        background-color: darken( $platinum, 20%);
+                    }
+                }
+            }
+        }
+
+        .gold {
+            h3 {
+                color: $gold;
+            }
+
+            .reward-class-container {
+                .reward-class {
+                    background-color: #d8c2a1;
+                    color: #c8ae8b;
+                }
+            }
+
+            .btn.btn-redeem {
+                background-color: $gold;
+
+                &:hover {
+                    background-color: lighten($gold, 20%);
+                }
+                &.btn-purchase{
+                    &:hover{
+                        background-color: darken( $gold, 7.5%);
+                    }
+                }
+            }
+        }
+
+        .silver {
+            h3 {
+                color: $silver;
+            }
+
+            .reward-class-container {
+                .reward-class {
+                    background-color: #e8e9ec;
+                    color: #dddee2;
+                }
+            }
+
+            .btn.btn-redeem {
+                background-color: $silver;
+
+                &:hover {
+                    background-color: lighten($silver, 20%);
+                }
+
+                &.btn-purchase {
+                    &:hover {
+                        background-color: darken( $silver, 20%);
+                    }
+                }
+            }
+        }
+
+        .bottom-button {
+            @include center;
+            text-align: center;
+            margin-top: -40px;
+        }
+    }
+
+    #custom-invite-link {
+        text-align: center;
+    }
+
+    #confirm-img {
+        display: inherit;
+        height: 180px;
+        @include center;
+    }
+}
+
+.small-hide{
+    display:block;
+}
+
+.referral-link{
+    padding-bottom:20px;
+}
+
+@media(max-width:990px) and (min-width:768px){
+    .referral-wrapper{
+        .content {
+            .steps {
+                .step-detail {
+                    width: 220px;
+                    height: $step-detail-width * 1.1;
+                    .step-footer{
+                        width:220px;
+                    }
+                }
+                .step-content{
+                    h4{
+                        font-size:21px;
+                    }
+                }
+            }
+        }
+        .reward{
+            .reward-class-container{
+                .reward-group{
+                    li{
+                        margin-left:5px;
+                        margin-right:5px;
+                        .reward-detail{
+                            width:220px;
+                        }
+                    }
+                }
+            }
+        }
+        .btn.btn-redeem{
+            min-width:160px;
+        }
+    }
+    .small-hide{
+        display:none;
+    }
+
+}
+
+@media(max-width:767px){
+    .referral-wrapper{
+        .gold,.silver{
+            padding-top:600px;
+        }
+        .silver{
+            margin-bottom:620px;
+        }
+        .reward{
+            .reward-class-container{
+                .reward-class{
+                    display:none;
+                }
+                .reward-group{
+                    li{
+                        display:block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:991px) and (min-width:700px){
+    .invite-featured{
+        li:last-child{
+            display:none;
+        }
+    }
+}
+
+@media(max-width:1200px) and (min-width:990px){
+    .featured-list{
+        li:last-child{
+            display:none;
+        }
+    }
+}
+
+@media(max-width:767px){
+    .content{
+        .steps{
+            .step-detail{
+                margin-bottom:50px;
+            }
+            .step-3{
+                .step-detail{
+                    margin-bottom:0;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:540px){
+    .invite-featured,
+    .featured-list{
+        li:nth-child(2),
+        li:nth-child(3),
+        li:nth-child(4){
+            display:none;
+        }
+    }
+}

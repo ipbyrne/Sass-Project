@@ -1,0 +1,575 @@
+//HOMEPAGE HERO
+//For other homepage styles, go to homepage.scss
+
+//--START main banner--//
+.banner {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 95vh;
+    overflow: hidden;
+
+    h1 {
+        //TODO: Define overall font-families throughout
+        font-family:"Oswald Light", sans-serif;
+        font-size: 58px;
+        font-weight: normal;
+        color: #fff;
+        margin: 0;
+        padding: 0 0 4px 0;
+        //text-align: center;
+        text-transform: uppercase;
+        text-shadow: 2px 2px rgba(0,0,0,.5);
+        span {
+            font-weight: bold;
+        }
+    }
+
+    h3 {
+        font-family: Helvetica, Arial, sans-serif;
+        padding: 0 0 24px 0;
+        margin: 0;
+        //text-align: center;
+        font-size: 24px;
+        line-height: 26px;
+        color: #fff;
+        text-shadow: 2px 2px rgba(0,0,0,.33);
+        letter-spacing:1px;
+        font-weight:normal;
+        text-transform:none;
+    }
+
+    .small-text{
+        h1{
+            font-size:50px;
+        }
+        h3{
+            font-size:20px;
+        }
+    }
+
+    .image-holder {
+        position: absolute;
+        top: 54px;
+        height: 100%;
+        width: 100%;
+
+        background: url("/img/homepage/overhead-meeting.jpg") no-repeat top center;
+        background-size: cover;
+    }
+
+    .action-holder {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .report-holder{
+        position: absolute;
+        top:27vh;
+        width:220px;
+        z-index:1000;
+        left:8%;
+        img{
+            -ms-transform: rotate(-9deg); /* IE 9 */
+            -webkit-transform: rotate(-9deg); /* Chrome, Safari, Opera */
+            transform: rotate(-9deg);
+            @include box-shadow(0, 6px, 12px, 0, rgba(0,0,0,.175));
+        }
+    }
+
+    @media (max-width:990px){
+
+    }
+
+    @media (max-width:767px){
+
+    }
+
+    @media (min-width:1200px){
+        .report-holder{
+            left:6%;
+
+        }
+    }
+
+    @media (min-width:1400px){
+        .report-holder{
+            left:12%;
+
+        }
+    }
+
+    @media (min-width:1900px){
+        .report-holder{
+            left:21.5%;
+
+        }
+    }
+
+    .home-text-holder {
+        //BACKGROUND DEFAULT
+        background-color: rgba(0, 0, 0, 0.33);
+        display:table;
+        text-align: center;
+        margin: 31vh auto 0;
+        width:100%;
+        //border-radius: 8px;
+        padding:24px;
+        button{
+            //font-family:"Oswald Light", sans-serif;
+            //TODO: Add to variables
+            background-color:#db4714;
+            min-width:208px;
+            color:#fff;
+            padding:10px 40px;
+            border:0;
+            font-size: 28px;
+            text-transform:uppercase;
+            @include border-radius(4px);
+            //letter-spacing:.05em;
+            display:inline-block;
+            cursor:pointer;
+            margin:0 10px;
+            &.city{
+                text-transform:inherit;
+            }
+        }
+    }
+
+    .search-form {
+        width: 100%;
+        //margin: 143px auto 0;
+        padding: 12px 8px;
+        //Instead of the line below you could use @includebox-sizing($bs)
+        box-sizing: border-box;
+        background:  rgba(0, 0, 0, .4);
+        //@include border-radius(4px);
+        text-align:center;
+        position:absolute;
+        bottom:0;
+        left:0;
+
+        label {
+            color: #fff;
+            font-size: 22px;
+            line-height: 24px;
+            font-weight: 400;
+            padding-right: 24px;
+            padding-bottom:6px;
+        }
+
+        input[type="text"] {
+            background: #eee;
+            padding: 10px;
+            //border: 1px solid #999;
+            width: 26%;
+            //Instead of the line below you could use @includebox-sizing($bs)
+            box-sizing: border-box;
+            //@include border-radius(3px);
+            font-size: 18px;
+            line-height: 22px;
+            color: #999;
+            margin:0;
+            vertical-align:bottom;
+        }
+
+        input[type="button"] {
+            width: 13%;
+            background: $secondary-blue;
+            border: 0;
+            padding: 14px 0;
+            font-size: 18px;
+            line-height: 14px;
+            color: #fff;
+            //font-weight: bold;
+            text-transform: uppercase;
+            //@include border-radius(3px);
+            //margin-left: 10px;
+            vertical-align:bottom;
+        }
+    }
+
+    .search-cta {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        text-align:center;
+
+        a {
+            background-color: $secondary-blue;
+            border: 0 none;
+            padding: 6px 18px;
+            font-size: 15px;
+            line-height: 14px;
+            color: #fff;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            @include border-radius(4px);
+
+            &:hover {
+                background-color: #1443db;
+            }
+        }
+    }
+
+    .desk{
+        display:block;
+        @media (max-width: $screen-xs-max) {
+            display: none;
+        }
+    }
+
+    .mob{
+        display:none;
+        @media (max-width: $screen-xs-max) {
+            display: block;
+        }
+    }
+
+    &.bg-feature{
+        .image-holder {
+            background: url("/img/coop-feature/front-gray4.jpg") no-repeat top center;
+            background-size: cover;
+        }
+
+        .home-text-holder {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &.bg-alt{
+        .image-holder {
+            background: url("/img/homepage/woman-notes.jpg") no-repeat top center;
+            background-size: cover;
+
+        }
+
+        .home-text-holder {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+    &.bg-info{
+
+        height:100vh;
+
+        .image-holder {
+            background: url("/img/homepage/collaboration.jpg") no-repeat top center;
+            background-size: cover;
+
+            top:0;
+        }
+
+        .content-position{
+            padding-top:100px;
+        }
+
+        h2,p,i{
+            color:#fff;
+        }
+
+        h2{
+            text-transform:inherit;
+            font-weight:normal;
+            font-size:2.7em;
+            &.second-line{
+                padding:3px 0 50px 70px;
+            }
+        }
+
+        .more{
+            font-weight:300;
+            font-size:.9em;
+        }
+
+        .info-title{
+            font-size:1.3em;
+            padding-bottom:3px;
+        }
+
+        .info-subtitle{
+            font-size:.8em;
+            font-weight:300;
+            padding-bottom:24px;
+
+            .ex-break{
+                display:none;
+                line-height:0;
+            }
+
+        }
+
+        .info-btn{
+            text-transform:uppercase;
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            background-image: none;
+            border: 2px solid #fff;
+            white-space: nowrap;
+            padding: 8px 16px;
+            font-size: 1em;
+            line-height: 1.42857;
+            -webkit-user-select: none;
+            color:#fff;
+            min-width:120px;
+
+            &:hover, a:hover{
+                text-decoration: none;
+                color:$main-orange;
+                font-weight:bold;
+            }
+
+            &.hvr-sweep-to-top{
+                &:before{
+                    background: #fff;
+                }
+            }
+
+        }
+
+        .faux-header{
+            z-index: 10;
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+
+            .logo-holder{
+                margin:16px 0 16px 20px;
+                float:left;
+
+                img{
+                    display:inline-block;
+                    width:134px;
+                    height:20px;
+                }
+            }
+
+            .fh-right{
+                float:right;
+                margin-right:0;
+                .login-holder{
+                    margin:16px 22px;
+                    display:inline-block;
+                }
+                a{
+                    font-family:"ProximaNova Regular", Helvetica, Arial, sans-serif;
+                    color:#fff;
+                    font-size:.9em;
+                    letter-spacing:.05em;
+                    text-transform:uppercase;
+                    font-weight:300;
+                    &:hover{
+                        color:#fff;
+                        text-decoration:underline;
+                    }
+                }
+            }
+        }
+
+        .more-info-holder{
+            cursor:pointer;
+        }
+
+        .down-arrow{
+            line-height:.7;
+        }
+
+        .bottom-align{
+            position:absolute;
+            bottom:20px;
+            z-index:1;
+            left:0;
+            right:15px;
+        }
+
+        .type-holder{
+            margin-bottom:30px;
+        }
+
+    }
+
+}
+
+//--END main banner--//
+
+//--START responsive--//
+
+//min markers
+//max markers
+@media (max-width:990px) {
+    .banner{
+        .search-form{
+            label{
+                font-size:18px;
+            }
+            input[type="text"]{
+                font-size:14px;
+                padding:11px;
+                width:28%;
+                line-height:17px;
+            }
+            input[type="button"]{
+                height:39px;
+                padding: 10px 0;
+                font-size:17px;
+            }
+        }
+        .report-holder{
+            top:29vh;
+            width:180px;
+            left:3%;
+        }
+        h1{
+            font-size:52px;
+        }
+        .small-text{
+            h1{
+                font-size:46px;
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .banner{
+        h1{
+            font-size:48px;
+        }
+        h3{
+            font-size:18px;
+        }
+        .small-text{
+            h1{
+                font-size:50px;
+            }
+            h3{
+                font-size:18px;
+            }
+        }
+        .report-holder{
+            width:160px;
+            position:relative;
+            margin:0 auto;
+            top:80px;
+            left:0;
+        }
+        .home-text-holder{
+            //margin:75px auto 0;
+        }
+
+        &.bg-info{
+            .info-title{
+                font-size:1.2em;
+            }
+            .info-subtitle{
+                .ex-break{
+                    display:block;
+                }
+            }
+            .image-holder {
+                background: url("/img/homepage/collaboration-mobile.jpg") no-repeat top center;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+@media (max-width:640px) {
+    .banner{
+        height:100vh;
+        .feature{
+            &.plus-img{
+                h1{
+                    font-size:26px;
+                }
+                h3{
+                    font-size:14px;
+                    line-height:1.4;
+                }
+            }
+        }
+        &.bg-info{
+            h2{
+                text-align:center;
+                font-size:1.5em;
+                &.second-line{
+                    padding:3px 0 20px;
+                }
+            }
+            .content-position{
+                padding-top:50px;
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .banner{
+        h1{
+            font-size:36px;
+        }
+        h3{
+            font-size:18px;
+        }
+    }
+}
+
+@media screen and(max-width: 380px) {
+    .banner {
+        h1 {
+            font-size: 30px;
+            line-height: 38px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width:641px) and (max-width:767px){
+    .banner{
+        &.bg-info{
+            .col-xs-12{
+                &.col-mid-sm{
+                    width:50%;
+                }
+            }
+        }
+    }
+}
+
+/** 
+ * iPad with portrait orientation. vh fix.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  .banner {
+    height: 924px;
+    .home-text-holder{
+        margin: 31% auto 0;
+    }
+    &.bg-info{
+        height:1024px;
+    }
+  }
+}
+
+/** 
+ * iPad with landscape orientation. vh fix.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+  .banner {
+    height: 668px;
+    .home-text-holder{
+        margin:31% auto 0;
+    }
+    &.bg-info{
+        height:768px;
+    }
+  }
+}

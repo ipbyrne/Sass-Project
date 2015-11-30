@@ -1,0 +1,172 @@
+html {
+    margin: 0;	padding: 0;	border: 0;
+}
+body {
+    margin: 0;  padding: 0; border: 0;
+}
+div {
+    margin: 0;  padding: 0; border: 0;
+}
+span {
+    margin: 0;  padding: 0; border: 0;
+}
+object {
+    margin: 0;  padding: 0; border: 0;
+}
+iframe {
+    margin: 0;  padding: 0; border: 0;
+}
+h1 {
+    margin: 0;  padding: 0; border: 0; 
+}
+h2 {
+    margin: 0;  padding: 0; border: 0; 
+}
+h3 {
+    margin: 0;  padding: 0; border: 0; 
+}
+h4 {
+    margin: 0;  padding: 0; border: 0; 
+}
+h5 {
+    margin: 0;  padding: 0; border: 0; 
+}
+h6 {
+    margin: 0;  padding: 0; border: 0; 
+}
+p {
+    margin: 0;  padding: 0; border: 0;
+}
+blockquote {
+    margin: 0;  padding: 0; border: 0;
+    quotes: "" "";
+    &:before {
+	content: '';
+    }
+    &:after {
+	content: '';
+    }
+}
+pre {
+    margin: 0;  padding: 0; border: 0;
+}
+a {
+    margin: 0;  padding: 0; border: 0;
+    img {
+	border: none;
+    }
+}
+abbr {
+    margin: 0;  padding: 0; border: 0;
+}
+acronym {
+    margin: 0;  padding: 0; border: 0;
+}
+address {
+    margin: 0;  padding: 0; border: 0;
+}
+code {
+    margin: 0;  padding: 0; border: 0;
+}
+del {
+    margin: 0;  padding: 0; border: 0;
+}
+dfn {
+    margin: 0;  padding: 0; border: 0;
+}
+em {
+    margin: 0;  padding: 0; border: 0;
+}
+img {
+    margin: 0;  padding: 0; border: 0;
+}
+q {
+    margin: 0;  padding: 0; border: 0;
+    quotes: "" "";
+    &:before {
+	content: '';
+    }
+    &:after {
+	content: '';
+    }
+}
+dl {
+    margin: 0;  padding: 0; border: 0;
+}
+dt {
+    margin: 0;  padding: 0; border: 0;
+}
+dd {
+    margin: 0;  padding: 0; border: 0;
+}
+ol {
+    margin: 0;  padding: 0; border: 0;
+}
+ul {
+    margin: 0;  padding: 0; border: 0;
+    list-style: none;  padding: 0; margin: 0;
+    li {
+	list-style: none;  padding: 0; margin: 0;
+	ul {
+	    list-style: none;  padding: 0; margin: 0;
+	    li {
+		list-style: none;  padding: 0; margin: 0;
+	    }
+	}
+    }
+    ol {
+	list-style: none;  padding: 0; margin: 0;
+    }
+}
+li {
+    margin: 0;  padding: 0; border: 0;
+}
+fieldset {
+    margin: 0;  padding: 0; border: 0;
+}
+form {
+    margin: 0;  padding: 0; border: 0;
+}
+label {
+    margin: 0;  padding: 0; border: 0;
+}
+legend {
+    margin: 0;  padding: 0; border: 0;
+}
+caption {
+    margin: 0;  padding: 0; border: 0;
+}
+article {
+    margin: 0;  padding: 0; border: 0;
+    display: block;
+}
+aside {
+    margin: 0;  padding: 0; border: 0;
+    display: block;
+}
+dialog {
+    margin: 0;  padding: 0; border: 0;
+    display: block;
+}
+figure {
+    margin: 0;  padding: 0; border: 0;
+    display: block;
+}
+footer {
+    margin: 0;  padding: 0; border: 0;
+}
+hgroup {
+    margin: 0;  padding: 0; border: 0;
+    display: block;
+}
+nav {
+    margin: 0;  padding: 0; border: 0;
+    display: block;
+}
+section {
+    margin: 0;  padding: 0; border: 0;
+    display: block;
+}
+input {
+    margin: 0;  padding: 0; border: 0;
+}

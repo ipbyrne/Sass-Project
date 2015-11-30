@@ -1,0 +1,89 @@
+/*body {
+    font-family: Karla, sans-serif;
+    color: #000;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: #fff;
+
+}*/
+
+img {
+  max-width: 100%;
+}
+
+a{
+    color:$main-orange;
+    text-decoration:none;
+    &:hover{
+        color:$hover-orange;
+    }
+}
+
+:focus {
+    outline: 0;
+}
+.wrapper {
+    width: 100%;
+}
+.clear {
+    @extend %clearfix;
+}
+
+.center{
+    text-align:center;
+}
+
+/*bootstrap column padding adjustments*/
+.no-padding-left{
+    padding-left: 0 !important;
+}
+.no-padding-right{
+    padding-right: 0 !important;
+}
+.no-padding-top{
+    padding-top: 0 !important;
+}
+.no-padding-bottom{
+    padding-bottom: 0 !important;
+}
+.no-padding{
+    padding:0 !important;
+}
+/* centered columns styles - these rules are part of bootstrap 3 */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+//Where should this go?
+.glyphicon {
+    font-family:  Glyphicons Halflings;
+}
+
+.desktop{
+    display:block;
+}
+
+.mobile{
+    display:none;
+}
+
+.fa-lg{
+    font-size:1.7em;
+}
+
+@media only screen and (max-width:480px){
+    .mobile{
+        display:block;
+    }
+    .desktop{
+        display:none;
+    }
+}
