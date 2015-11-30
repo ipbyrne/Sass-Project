@@ -1,34 +1,4 @@
 /* Copyright 2013-2015 etc Chris Tabor. Licensed under MIT. */
-
-// colors
-
-$inactive: #bbb;
-$active: #65d074;
-$hover: #5671d0;
-$step-danger: #d3140f;
-$step-warning: #edb10a;
-$step-info: #5b32d6;
-
-// sizing
-
-$bubble-size: 20px;
-$bubble-line-thickness: 3px;
-$border-thickness: 1px;
-$darken-amount: 30%;
-
-// misc
-$mobile-size: 400px;
-
-@mixin bubble-style($color) {
-    background-color: $color;
-    color: $color;
-    border-color: darken($color, $darken-amount);
-    &:before,
-    &:after {
-        background-color: $color;
-        border-color: darken($color, $darken-amount);
-    }
-}
 .flexer {
     display: -webkit-box;
     display: -moz-box;

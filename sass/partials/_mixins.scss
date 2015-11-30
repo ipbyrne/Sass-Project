@@ -70,18 +70,114 @@ usage:
   box-shadow: $horiz $vert $blur $spread $color;
 }
 
-/*for the rewrite
-@mixin navigation-list {
-    list-style-type:none;
-    padding:0;
-    margin:0;
-    overflow:hidden;
-    > li{
-        display:block;
-        float:left;
-        &:last-child{
-            margin-right:0px;
-        }
+// Progress Wizard Mixins
+@mixin bubble-style($color) {
+    background-color: $color;
+    color: $color;
+    border-color: darken($color, $darken-amount);
+    &:before,
+    &:after {
+        background-color: $color;
+        border-color: darken($color, $darken-amount);
     }
 }
-*/
+
+// Referral Mixins
+@mixin transform($func) {
+    -ms-transform: $func; /* IE 9 */
+    -webkit-transform: $func; /* Chrome, Safari, Opera */
+    transform: $func;
+}
+
+@mixin tinted-background($rgba, $url) {
+    background: linear-gradient($rgba, $rgba), url($url) no-repeat top center;
+}
+
+@mixin center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// /Hover - Hacks Mixins
+@mixin hardwareAccel() {
+	// Improve performance on mobile/tablet devices
+	@include prefixed(transform, translateZ(0));
+}
+
+@mixin improveAntiAlias() {
+	// Improve aliasing on mobile/tablet devices
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@mixin fontSmooth() {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin forceBlockLevel() {
+	// Transforms need to be block-level to work
+	display: inline-block;
+	vertical-align: middle;
+}
+
+@mixin hacks() {
+	@include forceBlockLevel();
+	@include hardwareAccel();
+	@include improveAntiAlias();
+	@include fontSmooth();
+}
+
+
+// /Hover Mixins
+// prefix declarations
+@mixin prefixed($property, $value) {
+  @if $webkit == true {
+    -webkit-#{$property}: #{$value};
+  }
+
+  @if $moz == true {
+    -moz-#{$property}: #{$value};
+  }
+
+  @if $ms == true {
+    -ms-#{$property}: #{$value};
+  }
+
+  @if $o == true {
+    -o-#{$property}: #{$value};
+  }
+
+  #{$property}: #{$value};
+}
+
+// prefix keyframes
+@mixin keyframes($name) {
+  @if $webkit == true {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $moz == true {
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $ms == true {
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $o == true {
+    @-o-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}

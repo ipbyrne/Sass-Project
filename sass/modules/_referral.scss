@@ -1,22 +1,3 @@
-$step-num-diameter: 66px;
-$step-detail-width: 300px;
-$reward-detail-width: 260px;
-
-@mixin transform($func) {
-    -ms-transform: $func; /* IE 9 */
-    -webkit-transform: $func; /* Chrome, Safari, Opera */
-    transform: $func;
-}
-
-@mixin tinted-background($rgba, $url) {
-    background: linear-gradient($rgba, $rgba), url($url) no-repeat top center;
-}
-
-@mixin center {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .referral-wrapper {
     h1, h2, h3, h4, h5, h6 {
         text-align: center;

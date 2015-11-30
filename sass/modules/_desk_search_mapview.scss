@@ -1,23 +1,3 @@
-$result-margin: 10px;
-$results-container-sm-width: $screen-sm-min * 1 / 3;
-$results-container-md-width: $screen-md-min * 1 / 3;
-$results-container-lg-width: $screen-lg-min * 1 / 2;
-
-$result-sm-width: $results-container-sm-width - 2 * $result-margin;
-$result-md-width: $results-container-md-width - 2 * $result-margin;
-$result-lg-width: ($results-container-lg-width * 1 / 2) - 2 * $result-margin;
-
-$result-img-sm-height: $result-sm-width * 4 / 5;
-$result-img-md-height: $result-md-width * 4 / 5;
-$result-img-lg-height: $result-lg-width * 4 / 5;
-
-$search-results-options-height: 33px;
-$left-bar-width: 340px;
-$left-bar-width-sm: 280px;
-
-// Make room for the top navbar.
-$top-margin: 54px;
-
 body#desk-search-map {
   background-color: #ececec;
   .navbar.fixed {

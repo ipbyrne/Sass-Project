@@ -1,24 +1,19 @@
 // --------------------------------------------------
 // Colors
 //
-
 $kinglet-orange:                #f78c2c; //rgb(247,140,44)
 $kinglet-orange-dark:           #f57400;
-
 $kinglet-green:                 #b7c408;
 $kinglet-green-tint:            rgba(183, 196, 8, 0.5);
 $kinglet-green-dark:            #abb529;
-
 $kinglet-red:                   #f26651;
 $kinglet-red-dark:              #ef4025;
-
 $kinglet-blue:                  #0864d4; //rgb(8,100,212)
 $kinglet-blue-tint:             rgba(8, 100, 212, 0.5);
 $kinglet-blue-dark:             #002b60; //rgb(0,43,96)
 $kinglet-blue-light:            #00aeef;
 $kinglet-blue-light-tint:       rgba(0, 174, 239, 0.5);
 $kinglet-blue-light-alt:		#79cff3; //rgb(121,207,243)
-
 $kinglet-gray-super-light:      #eeeeee;
 $kinglet-gray-light:            #c2c2c2;
 $kinglet-gray-mid:              #777;
@@ -30,28 +25,92 @@ $gray-dark:						#414042;
 $gray-mid:						#939598;
 $gray-light:					#d1d3d4;
 $gray-xlight:					#efefef;
-
 $main-blue:						#093145;
 $main-orange:					#db4714;
 $secondary-blue:				#2aace3;
 $secondary-green:				#b6c434;
 $tertiary-blue:					#1443db;
-
 $hover-orange:					#f78c2c;
-
 $shadow-orange:					#b53425; //(181, 52, 37)
-
 $guest-green:					#20A738;
-
 $host-purple:					#B658D4;
 
+// Listing Form Color Vairables
+/* Office Listing Form */
+$form-grey: #f7f6f6;
 
+// Progress Wizard Color Variables
+$inactive: #bbb;
+$active: #65d074;
+$hover: #5671d0;
+$step-danger: #d3140f;
+$step-warning: #edb10a;
+$step-info: #5b32d6;
+
+// /Hover Colors
+// colors
+$primaryColor: #e1e1e1 !default;
+$secondaryColor: #666 !default;
+$highlightColor: #ccc !default;
+$activeColor: #2098D1 !default;
+$shadowColor: rgba(0, 0, 0, .6) !default;
+
+// curl colors
+$revealAreaColor: white !default;    // reveal area behind the curl
+$curlLineColor: #aaa !default;       // crease line
+$curlTransitionColor: #ccc !default;	// color transitioning from crease line to final color
+$curlLastColor: white !default;		// final color of the back of the curl
 
 // --------------------------------------------------
 // Alignment
 //
 
 $kinglet-header-height: 54px;
+
+// Desk Search Mapview Alignment Variables
+$result-margin: 10px;
+$results-container-sm-width: $screen-sm-min * 1 / 3;
+$results-container-md-width: $screen-md-min * 1 / 3;
+$results-container-lg-width: $screen-lg-min * 1 / 2;
+
+$result-sm-width: $results-container-sm-width - 2 * $result-margin;
+$result-md-width: $results-container-md-width - 2 * $result-margin;
+$result-lg-width: ($results-container-lg-width * 1 / 2) - 2 * $result-margin;
+
+$result-img-sm-height: $result-sm-width * 4 / 5;
+$result-img-md-height: $result-md-width * 4 / 5;
+$result-img-lg-height: $result-lg-width * 4 / 5;
+
+$search-results-options-height: 33px;
+$left-bar-width: 340px;
+$left-bar-width-sm: 280px;
+
+// Make room for the top navbar.
+$top-margin: 54px;
+// Progress Wizard Alignment Variables
+$bubble-size: 20px;
+$bubble-line-thickness: 3px;
+$border-thickness: 1px;
+$darken-amount: 30%;
+// misc
+$mobile-size: 400px;
+
+// Referral Alignment Variables
+$step-num-diameter: 66px;
+$step-detail-width: 300px;
+$reward-detail-width: 260px;
+
+// /Hover Alignment Variables
+// speech bubbles options
+$tipWidth: 10px !default;  //the width of the speech bubble tip
+$tipHeight: 10px !default; //the height of the speech bubble tip
+
+// arrow options
+$spaceBetweenTextAndArrows: 2.2em !default;
+
+// curl dimensions
+$curlWidth: 25px !default;
+$curlHeight: 25px !default;
 
 // --------------------------------------------------
 // Fonts
@@ -61,3 +120,28 @@ $kinglet-font-bold: "ProximaNova Bold", Helvetica, Arial, sans-serif;
 $kinglet-font-semibold: "ProximaNova SemiBold", Helvetica, Arial, sans-serif;
 $kinglet-font-regular: "ProximaNova Regular", Helvetica, Arial, sans-serif;
 $kinglet-font-light: "ProximaNova Light", Helvetica, Arial, sans-serif;
+
+
+// --------------------------------------------------
+// Durations
+//
+
+$fastDuration: .1s !default;
+$mediumDuration: .3s !default;
+$slowDuration: .5s !default;
+
+// --------------------------------------------------
+// Other
+//
+
+// Prefix for Hover class names
+$nameSpace: 'hvr' !default;
+
+// Browser Prefixes - Which CSS prefixes should be used?
+$webkit: true !default;
+$moz: false !default;
+$ms: false !default;
+$o: false !default;
+
+// Compile with or without classes
+$includeClasses: true !default;
